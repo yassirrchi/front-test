@@ -9,9 +9,10 @@ import { LoginFormComponent } from './components/forms/login-form/login-form.com
 import { ProductFormComponent } from './components/forms/product-form/product-form.component';
 import { BillFormComponent } from './components/forms/bill-form/bill-form.component';
 import { ClientFormComponent } from './components/forms/client-form/client-form.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withInterceptors } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './components/sections/dashboard/dashboard.component';
+import { tokenInterceptor } from './service/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { DashboardComponent } from './components/sections/dashboard/dashboard.co
     ReactiveFormsModule
 
   ],
-  providers: [],
+  providers: [provideHttpClient(withInterceptors([tokenInterceptor]))],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
