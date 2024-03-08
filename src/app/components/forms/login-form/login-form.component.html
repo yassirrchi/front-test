@@ -1,0 +1,13 @@
+    
+
+<div >
+    <form [formGroup]="userLogin"> 
+     
+
+    <input name="email" type="email"  formControlName="email"  placeholder="email">
+    <input name="password" type="password" formControlName="password"  placeholder="password">
+    <button (click)="testLive()">testLive</button>
+    <button (click)="onLogin()" type="submit" (submit)="onLogin()">Login</button>
+    </form>
+     
+</div>
