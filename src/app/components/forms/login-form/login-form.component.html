@@ -1,13 +1,14 @@
     
 
-<div >
+<div class="login-container">
     <form [formGroup]="userLogin"> 
+        <h1>Login</h1>
      
 
-    <input name="email" type="email"  formControlName="email"  placeholder="email">
-    <input name="password" type="password" formControlName="password"  placeholder="password">
-    <button (click)="testLive()">testLive</button>
-    <button (click)="onLogin()" type="submit" (submit)="onLogin()">Login</button>
+    <input name="email" class="text-box" type="email"  formControlName="email"  placeholder="email">
+    <input name="password" class="text-box" type="password" formControlName="password"  placeholder="password">
+     
+    <button (click)="onLogin()" type="submit" (submit)="onLogin()" class="submit-button">Login</button>
     </form>
      
 </div>

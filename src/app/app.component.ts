@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'peaqock-test';
+  isOpened:boolean=false;
+
+  sideBarHandler(isOpened:boolean){
+    this.isOpened=isOpened
+     
+
+  }
+  
 }

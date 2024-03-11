@@ -1,4 +1,41 @@
-.app{
-    background-color: red;
+ 
+.app {
+    display: flex;
+    width: 100vw;
     height: 100vh;
+    padding: 0;
+     
+
+     
+     
+     
+  }
+.content{
+    height: 100%;
+    width: 100%;
+     
+     
+    
 }
+.main{
+    background-color: rgb(241, 241, 241);
+     
+     
+}
+.main-content-flex-item{
+     
+height: 80%;
+
+}
+.header-content-flex-item{
+    height: 10%;
+     
+    
+
+}
+.footer-content-flex-item{
+    height: 10%;
+     
+
+}
+

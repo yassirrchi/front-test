@@ -1,4 +1,4 @@
-import { Input } from '@angular/core';
+import { EventEmitter, Input, Output } from '@angular/core';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,5 +8,15 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   @Input() headerText!:String;
+
+  showSidebar:boolean=false;
+  @Output() isOpened=new EventEmitter<boolean>()
+  
+  toggleSidebar = (): void => {
+    this.showSidebar = !this.showSidebar;
+    this.isOpened.emit(this.showSidebar);
+  };
+   
+
 
 }

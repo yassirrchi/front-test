@@ -36,9 +36,6 @@ export class LoginFormComponent {
 
   })}
 
-  testLive(){
-    this.userService.testLive().subscribe((data)=>{console.log(data)},(error)=>{console.log(error)})
-  }
-
+   
 
 }

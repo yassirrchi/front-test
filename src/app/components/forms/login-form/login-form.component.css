@@ -1,0 +1,39 @@
+.login-container{
+     
+     height: 100%;
+     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
+    width: 20%;
+    
+    border-radius: 20px;
+    background-color: rgb(13, 131, 123);
+
+}
+.text-box{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50px;
+    outline: none;
+    font-family: roboto;
+}
+h1{
+    color: white;
+    margin-bottom: 10%;
+}
+.submit-button{
+    background-color:  rgb(2, 153, 133);
+    width: 30%;
+    border-radius: 50px;
+    margin-top: 10px;
+    color: white;
+
+}
