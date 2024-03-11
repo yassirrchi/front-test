@@ -27,7 +27,7 @@ export class LoginFormComponent {
       console.log(data)
       console.log(JSON.stringify(data))
       localStorage.setItem("userInfos",JSON.stringify(data))
-      this.router.navigateByUrl("/dashboard")
+      this.router.navigateByUrl("/clients")
 
   },(error)=>{
 

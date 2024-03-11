@@ -1,1 +1,31 @@
-<p>clients works!</p>
+<div class="clients-container">
+    <app-list-add-bar></app-list-add-bar>
+    <div class="clients-table">
+        <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let client of clients">
+                <td>{{ client.id }}</td>
+                <td>{{ client.firstName }}</td>
+                <td>{{ client.lastName }}</td>
+                <td>{{ client.email }}</td>
+                <td>{{ client.address }}</td>
+                <td>{{ client.phoneNumber }}</td>
+                <td><button class="edit-button" (click)="editClient(client.id)">Edit</button></td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+
+</div>

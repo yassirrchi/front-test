@@ -18,6 +18,7 @@ import { UsersComponent } from './components/tables/users/users.component';
 import { BillsComponent } from './components/tables/bills/bills.component';
 import { ClientsComponent } from './components/tables/clients/clients.component';
 import { ProductsComponent } from './components/tables/products/products.component';
+import { ListAddBarComponent } from './components/shared/list-add-bar/list-add-bar.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ProductsComponent } from './components/tables/products/products.compone
     UsersComponent,
     BillsComponent,
     ClientsComponent,
-    ProductsComponent
+    ProductsComponent,
+    ListAddBarComponent
   ],
   imports: [
     BrowserModule,
