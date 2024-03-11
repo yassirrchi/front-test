@@ -13,6 +13,11 @@ import { HttpClientModule, provideHttpClient, withInterceptors } from '@angular/
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './components/sections/dashboard/dashboard.component';
 import { tokenInterceptor } from './service/token.interceptor';
+import { FooterComponent } from './components/ui/footer/footer.component';
+import { UsersComponent } from './components/tables/users/users.component';
+import { BillsComponent } from './components/tables/bills/bills.component';
+import { ClientsComponent } from './components/tables/clients/clients.component';
+import { ProductsComponent } from './components/tables/products/products.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { tokenInterceptor } from './service/token.interceptor';
     ProductFormComponent,
     BillFormComponent,
     ClientFormComponent,
-    DashboardComponent
+    DashboardComponent,
+    FooterComponent,
+    UsersComponent,
+    BillsComponent,
+    ClientsComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
