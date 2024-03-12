@@ -1,5 +1,5 @@
 .app-header{
-    background-color: black;
+    background-color:  rgb(2, 153, 133);
     color: white;
     height: 100px;
     padding: 20px 0px;
@@ -23,12 +23,17 @@
 }
 .title-section{
     width: 95%;
+     
 
      
 
 }
 .toggle-button{
-    background-color: rgb(59, 59, 59);
+    background-color:  rgb(2, 153, 133);
     padding: 20px;
     
+}
+.title-section {
+     
+     
 }

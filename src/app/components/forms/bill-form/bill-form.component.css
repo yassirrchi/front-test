@@ -1,5 +1,5 @@
 .client-form-container {
-    max-width: 400px;
+    max-width: 700px;
     margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -9,6 +9,9 @@
   form {
     display: grid;
     grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+     
   }
   
   label {
@@ -36,3 +39,32 @@
     margin: 5px;
 
   }
+  .modal-container{
+     
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    background-color: rgba(0, 0, 0, 0.637);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.products-table{
+  background-color: #ccc;
+  padding: 20px;
+}
+.products-table tr:hover{
+  background-color:rgba(2, 153, 133, 0.507); 
+  transform: translate(1%);
+  
+
+}
+.items-table{
+  background-color: #dadada;
+  border: 1px solid  rgb(2, 153, 133); ;
+}
+.emplty{
+  color: rgb(255, 108, 108);
+}

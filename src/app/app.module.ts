@@ -19,6 +19,8 @@ import { BillsComponent } from './components/tables/bills/bills.component';
 import { ClientsComponent } from './components/tables/clients/clients.component';
 import { ProductsComponent } from './components/tables/products/products.component';
 import { ListAddBarComponent } from './components/shared/list-add-bar/list-add-bar.component';
+import { ClientModalComponent } from './components/modals/client-modal/client-modal.component';
+import { ItemsModalComponent } from './components/modals/items-modal/items-modal.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { ListAddBarComponent } from './components/shared/list-add-bar/list-add-b
     BillsComponent,
     ClientsComponent,
     ProductsComponent,
-    ListAddBarComponent
+    ListAddBarComponent,
+    ClientModalComponent,
+    ItemsModalComponent
   ],
   imports: [
     BrowserModule,

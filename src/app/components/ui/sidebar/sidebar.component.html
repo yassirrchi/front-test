@@ -1,6 +1,6 @@
-<div class="sidebar header-content-flex-item" >
-    <p>{{isLoginPage}}</p>
-    <div class="menu-item" (click)="navigate('/users')">Users</div>
+<div class="sidebar header-content-flex-item" *ngIf="isLoginPage!='/login'" >
+    <h3>{{isLoginPage.split("/")[1].toUpperCase()}}</h3>
+    <div class="menu-item"   (click)="navigate('/users')" *ngIf="role=='ADMIN'">Users</div>
     <div class="menu-item" (click)="navigate('/clients')">Clients</div>
     <div class="menu-item" (click)="navigate('/products')">Products</div>
     <div class="menu-item" (click)="navigate('/bills')">Bills</div>

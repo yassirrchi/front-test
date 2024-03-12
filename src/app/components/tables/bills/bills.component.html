@@ -14,7 +14,7 @@
             <tbody>
               <tr *ngFor="let bill of bills">
                 <td>{{ bill.id }}</td>
-                <td><button>function (bill.client)</button> </td>
+                <td><button (click)="selectClient(bill.client)" class="show-button">Show Client</button> </td>
                 <td><button>function (bill.items)</button></td>
                 <td>{{bill.dateFacture| date:'medium' }}</td>
                  
@@ -25,4 +25,8 @@
 
     </div>
 
+    
+<app-client-modal (clientToShow)="selectedClient" *ngIf="showClientDetails " [clientToShow]="selectClient" (isClientOpened)="ClientBoxHandler($event)" ></app-client-modal>
+<app-items-modal *ngIf="false" ></app-items-modal>
+ 
 </div>

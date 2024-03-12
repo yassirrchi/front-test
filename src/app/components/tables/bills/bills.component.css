@@ -15,7 +15,10 @@ table{
 th{
     text-align: center;
 }
-.edit-button{
+.edit-button,.show-button{
     background-color: rgb(2, 153, 133);
     color:white;
+}
+.close-button{
+    z-index: 900;
 }

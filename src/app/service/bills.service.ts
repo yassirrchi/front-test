@@ -13,5 +13,9 @@ export class BillsService {
     return this.http.get<any>("http://localhost:4500/all-bills")
 
   }
+  createBill(billData:any):Observable<any>{
+
+    return this.http.post("http://localhost:4500/bill/create",{})
+  }
 
 }

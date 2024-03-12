@@ -8,6 +8,9 @@ import { BillsService } from '../../../service/bills.service';
 })
 export class BillsComponent implements OnInit {
   bills:any=[]
+  selectedClient!:any;
+  showClientDetails=false;
+   
   constructor(private billService:BillsService){
 
   }
@@ -21,6 +24,20 @@ export class BillsComponent implements OnInit {
       console.log(error)
     })
   }
+  selectClient(selectedBillClient:any){
+    
+     
+    this.selectClient=selectedBillClient
+    this.showClientDetails=true;
+    
+
+  }
+  ClientBoxHandler(isOpened:boolean){
+     
+    this.showClientDetails=isOpened
+
+  }
+
 
 
 

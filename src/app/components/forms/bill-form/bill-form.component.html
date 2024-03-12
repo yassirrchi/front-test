@@ -4,20 +4,29 @@
     
     <h3 > Add a new Bill</h3>
      
-    <form   >
+    <form   [formGroup]="billForm"  >
       <label for="firstName">Client :  </label>
 
-      <select>
+      <select formControlName="client_id">
         <option *ngFor="let client of clients"> #{{client.id}} {{client.firstName}} {{client.lastName}}</option>
 
       </select>
-      <label for="firstName">Items : <button>Show products</button>  </label>
-      <div *ngIf="billItems.length==0">Emplty items</div>
+      <label for="firstName">Items : <button (click)="showProducts()">Show products</button>  </label>
+      <div *ngIf="billItems.length==0"> <span class="emplty">Emplty items</span></div>
 
-      <div *ngIf="billItems.length>0">
-        <div *ngFor="let billItem of billItems"><div>#{{billItem.product_id}} x <button class="counter-btn" (click)="removeQuantity(billItem.product_id)">-</button> {{billItem.quantity}} <button class="counter-btn" (click)="addQuantity(billItem.product_id)">+</button></div></div>
+      <div *ngIf="billItems.length>0" class="items-table">
+        <table>
+          <tr><th>Name</th><th>Price</th><th>Quanity</th><th>sum</th></tr>
+        <tr *ngFor="let billItem of billItems">
+          <td>{{billItem.product_name}}</td>
+          <td>{{billItem.price}}</td>
+          <td>  <button class="counter-btn" (click)="removeQuantity(billItem.product_id)">-</button> {{billItem.quantity}} <button class="counter-btn" (click)="addQuantity(billItem.product_id)">+</button></td> 
+          <td>{{billItem.price*billItem.quantity}}</td>
+          
+           </tr>
+        </table>
       </div>
-      <label for="firstName">Total :  </label>
+      <label for="firstName">Total :{{total|number}}  </label>
 
       <div></div>
     
@@ -29,11 +38,11 @@
   
       
   
-      <button type="submit"  >save</button>
+      <button type="submit"  >Create</button>
     </form>
   </div>
 
-  <div class="products-page">
+  <div class="products-page modal-container" *ngIf="openProductsBox" >
     <div class="products-table">
         <table>
             <thead>
@@ -54,7 +63,7 @@
                 <td>{{ product.quantityInStock }}</td>
                 <td>{{ product.price }}</td>
                  
-                <td><button class="edit-button" (click)="addProductToItems(product.id)" >Add to items</button></td>
+                <td><button class="edit-button" (click)="addProductToItems(product)" >Add to items</button></td>
               </tr>
             </tbody>
           </table>

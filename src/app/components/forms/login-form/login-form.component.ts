@@ -30,6 +30,7 @@ export class LoginFormComponent implements OnInit {
     this.userService.login(this.userLogin).subscribe((data)=>{
       console.log(data)
       console.log(JSON.stringify(data))
+      
       localStorage.setItem("userInfos",JSON.stringify(data))
       this.router.navigateByUrl("/clients")
 

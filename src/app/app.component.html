@@ -1,12 +1,12 @@
 
 <div class="app">
 
-  <app-sidebar *ngIf="isOpened"   ></app-sidebar>
+  <app-sidebar *ngIf="isOpened"  ></app-sidebar>
 
    <div class="content">
     <div class="header-content-flex-item ">
 
-     <app-header   (isOpened)="sideBarHandler($event)"  [headerText]="'Test Technique'"/>
+     <app-header   (isOpened)="sideBarHandler($event)" (isSideBarOpened)="isOpened" [headerText]="'Application de gestion des factures'"/>
      </div>
 
      <div class="main main-content-flex-item">
