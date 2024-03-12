@@ -1,14 +1,28 @@
 .sidebar {
     background-color: #333;
     color: white;
-    padding:   16px 0px;
+    padding:   16px 5px;
     margin: 0px;
      
     width: 200px;
     height: 100%;
   }
 .menu-item{
-    padding: 10px 0px;
-    background-color: red;
+    padding: 10px 5px;
+     
 }
+.menu-item:hover{
+    padding: 10px 0px;
+    background-color: #555555;
+     
+}
+.logout-btn{
+    background-color: #ff4c4c;
+
+}
+.logout-btn:hover{
+    background-color: #ff7d7d;
+
+}
+ 
  

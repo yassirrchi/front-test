@@ -1,8 +1,9 @@
-<div class="sidebar header-content-flex-item">
-    <p>Sidebar Works</p>
-    <div class="menu-item">Users</div>
-    <div class="menu-item">Clients</div>
-    <div class="menu-item">Products</div>
-    <div class="menu-item">Bills</div>
+<div class="sidebar header-content-flex-item" >
+    <p>{{isLoginPage}}</p>
+    <div class="menu-item" (click)="navigate('/users')">Users</div>
+    <div class="menu-item" (click)="navigate('/clients')">Clients</div>
+    <div class="menu-item" (click)="navigate('/products')">Products</div>
+    <div class="menu-item" (click)="navigate('/bills')">Bills</div>
+    <div class="menu-item logout-btn" (click)="navigate('/login')">Logout</div>
 
   </div>

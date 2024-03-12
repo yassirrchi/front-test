@@ -1,1 +1,64 @@
-<p>bill-form works!</p>
+
+<app-list-add-bar></app-list-add-bar>
+<div class="client-form-container">
+    
+    <h3 > Add a new Bill</h3>
+     
+    <form   >
+      <label for="firstName">Client :  </label>
+
+      <select>
+        <option *ngFor="let client of clients"> #{{client.id}} {{client.firstName}} {{client.lastName}}</option>
+
+      </select>
+      <label for="firstName">Items : <button>Show products</button>  </label>
+      <div *ngIf="billItems.length==0">Emplty items</div>
+
+      <div *ngIf="billItems.length>0">
+        <div *ngFor="let billItem of billItems"><div>#{{billItem.product_id}} x <button class="counter-btn" (click)="removeQuantity(billItem.product_id)">-</button> {{billItem.quantity}} <button class="counter-btn" (click)="addQuantity(billItem.product_id)">+</button></div></div>
+      </div>
+      <label for="firstName">Total :  </label>
+
+      <div></div>
+    
+
+
+      
+  
+      
+  
+      
+  
+      <button type="submit"  >save</button>
+    </form>
+  </div>
+
+  <div class="products-page">
+    <div class="products-table">
+        <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Efit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of products">
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.quantityInStock }}</td>
+                <td>{{ product.price }}</td>
+                 
+                <td><button class="edit-button" (click)="addProductToItems(product.id)" >Add to items</button></td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+    
+  </div>

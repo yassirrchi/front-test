@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { UserService } from '../../../service/user.service';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.css'
 })
-export class LoginFormComponent {
+export class LoginFormComponent implements OnInit {
   userLogin=new FormGroup({
     email:new FormControl(""),
     password:new FormControl("")
@@ -17,6 +17,10 @@ export class LoginFormComponent {
 
    
   constructor(private userService:UserService){
+     
+  }
+  ngOnInit(): void {
+    localStorage.removeItem("userInfos");
      
   }
 

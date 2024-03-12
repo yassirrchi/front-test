@@ -19,9 +19,9 @@ export class UserService {
   }
 
 
-  testLive():Observable<any>{
+  getAllUsers():Observable<any>{
 
-    return this.http.get<any>("http://localhost:4500/live")
+    return this.http.get<any>("http://localhost:4500/all-users")
 
   }
 

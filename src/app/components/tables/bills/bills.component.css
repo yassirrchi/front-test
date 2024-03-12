@@ -1,0 +1,21 @@
+.bills-container{
+     
+    height: 100%;
+}
+.bills-table{
+    display: flex;
+    justify-content: center;
+    
+}
+table{
+    width: 70%;
+    border: 1px solid black;
+    text-align: center;
+}
+th{
+    text-align: center;
+}
+.edit-button{
+    background-color: rgb(2, 153, 133);
+    color:white;
+}

@@ -16,9 +16,19 @@
 }
 .toggler-section{
     width: 5%;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+     
 }
 .title-section{
     width: 95%;
+
      
 
+}
+.toggle-button{
+    background-color: rgb(59, 59, 59);
+    padding: 20px;
+    
 }

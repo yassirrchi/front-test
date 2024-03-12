@@ -1,1 +1,28 @@
-<p>bills works!</p>
+<div class="bills-container">
+    <app-list-add-bar></app-list-add-bar>
+    <div class="bills-table">
+        <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Client</th>
+                <th>Items</th>
+                <th>Date</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let bill of bills">
+                <td>{{ bill.id }}</td>
+                <td><button>function (bill.client)</button> </td>
+                <td><button>function (bill.items)</button></td>
+                <td>{{bill.dateFacture| date:'medium' }}</td>
+                 
+                <td><button class="edit-button"  >Edit</button></td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+
+</div>
